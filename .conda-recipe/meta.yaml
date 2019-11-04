@@ -4,7 +4,7 @@
 {% set GIT_VERSION = GIT_DESCRIBE_TAG[1:] %}
 {% endif %}
 {% set PKG_NAME = 'grove-i2c-motor-driver' %}
-{% set MODULE_NAME = PKG_NAME.replace('-', '_') %}
+{% set MODULE_NAME = 'grove_i2c_motor' %}
 # source will be downloaded prior to filling in jinja templates
 # Example assumes that this folder has setup.py in it
 source:
