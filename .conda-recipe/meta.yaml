@@ -3,7 +3,7 @@
 {% else %}
 {% set GIT_VERSION = GIT_DESCRIBE_TAG[1:] %}
 {% endif %}
-{% set PKG_NAME = 'm5-stepmotor' %}
+{% set PKG_NAME = 'grove-i2c-motor-driver' %}
 {% set MODULE_NAME = PKG_NAME.replace('-', '_') %}
 # source will be downloaded prior to filling in jinja templates
 # Example assumes that this folder has setup.py in it
