@@ -1,21 +1,33 @@
-# Grove I2C motor driver #
+# Honeywell SSC Series pressure sensors driver #
 
-MicroPython driver for [Grove I2C motor driver][grove-i2c-motor] board.
+MicroPython driver for [Honeywell TruStability(R) SSC Series][honeywell-ssc]
+I2C pressure sensors.
 
-**Note: driver board must be flashed with custom [`base-node`][base-node]
-firmware.**
+# Usage
+
+```python
+>>> from honeywell_ssc import HoneywellSSC
+>>>
+>>> sensor = HoneywellSSC(i2c, addr=0x28)
+>>> sensor.read()  # Ambient pressure (PSI)
+0.4467772
+```
 
 -------------------------------------------------------------------------------
 
 Install
 -------
 
-The latest [`grove-i2c-motor-driver` release][1] is available as a
+The latest [`honeywell-ssc` release][1] is available as a
 [Conda][2] package from the [`sci-bots`][2] channel.
 
-To install `grove-i2c-motor-driver` in an **activated Conda environment**, run:
+To install `honeywell-ssc` in an **activated Conda environment**, run:
 
-    conda install -c sci-bots -c conda-forge grove-i2c-motor-driver
+    conda install -c sci-bots -c conda-forge honeywell-ssc
+
+This installs the MicroPython source files into the following path:
+
+    $env:CONDA_PREFIX/share/platformio/micropython-lib/honeywell_ssc
 
 -------------------------------------------------------------------------------
 
@@ -32,7 +44,6 @@ Contributors
  - Christian Fobel ([@sci-bots](https://github.com/sci-bots))
 
 
-[1]: https://github.com/sci-bots/grove-i2c-motor-driver
-[2]: https://anaconda.org/sci-bots/grove-i2c-motor-driver
-[base-node]: https://github.com/sci-bots/base-node
-[grove-i2c-motor]: http://wiki.seeedstudio.com/Grove-I2C_Motor_Driver_V1.3
+[1]: https://github.com/sci-bots/honeywell-ssc
+[2]: https://anaconda.org/sci-bots/honeywell-ssc
+[honeywell-ssc]: https://sensing.honeywell.com/honeywell-sensing-trustability-ssc-series-standard-accuracy-board-mount-pressure-sensors-50099533-a-en.pdf
