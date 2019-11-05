@@ -3,8 +3,8 @@
 {% else %}
 {% set GIT_VERSION = GIT_DESCRIBE_TAG[1:] %}
 {% endif %}
-{% set PKG_NAME = 'grove-i2c-motor-driver' %}
-{% set MODULE_NAME = 'grove_i2c_motor' %}
+{% set PKG_NAME = 'honeywell-ssc' %}
+{% set MODULE_NAME = PKG_NAME.replace('-', '_') %}
 # source will be downloaded prior to filling in jinja templates
 # Example assumes that this folder has setup.py in it
 source:
@@ -29,8 +29,6 @@ requirements:
   build:
     - platformio-helpers >=0.8
     - python
-  run:
-    - base-node-dev >=0.16.1
 
 about:
   home: https://github.com/sci-bots/{{ PKG_NAME }}
